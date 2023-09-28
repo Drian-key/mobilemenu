@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <div class="nav-menu">
+      <div class="extra-menu hidden">
+        <div class="schedule">
+          <i class="bi bi-calendar-event"></i>
+          <span>Schedule</span>
+        </div>
+        <div class="report">
+          <i class="bi bi-clipboard-data"></i>
+          <span>Report</span>
+        </div>
+        <div class="close"><i class="bi bi-x-lg"></i></div>
+      </div>
+      <div class="plus"><span>+</span></div>
+      <div class="menu">
+        <div>
+          <i class="bi bi-house"></i>
+          <span>Home</span>
+        </div>
+        <div>
+          <i class="bi bi-search"></i>
+          <span>Search</span>
+        </div>
+        <div>
+          <i class="bi bi-stopwatch"></i>
+          <span>History</span>
+        </div>
+        <div>
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const open = document.querySelector(".plus");
+      const extraMenu = document.querySelector(".extra-menu");
+      const close = document.querySelector(".close");
+
+      open.addEventListener("click", () => {
+        open.classList.add("hidden");
+        extraMenu.classList.remove("hidden");
+      });
+
+      close.addEventListener("click", () => {
+        open.classList.remove("hidden");
+        extraMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

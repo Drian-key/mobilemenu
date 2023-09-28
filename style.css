@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: rgb(133, 133, 133);
+}
+
+.nav-menu {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  padding: 10px 25px 25px 25px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu div:nth-child(1) {
+  color: white;
+}
+
+.menu div i {
+  font-size: 25px;
+  z-index: 99;
+}
+
+.plus {
+  width: 60px;
+  top: -30px;
+  border-radius: 100% 100% 0 0;
+  height: 60px;
+  position: absolute;
+  background-color: #000;
+  transition: all 300ms ease-in-out;
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.plus::before {
+  content: "";
+  position: absolute;
+  right: -38px;
+  height: 40px;
+  width: 40px;
+  top: -10px;
+  border-bottom-left-radius: 30%;
+  box-shadow: 0 20px 0 0 black;
+}
+
+.plus::after {
+  content: "";
+  position: absolute;
+  left: -38px;
+  height: 40px;
+  width: 40px;
+  top: -10px;
+  border-bottom-right-radius: 30%;
+  box-shadow: 0 20px 0 0 black;
+}
+
+.extra-menu {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 300ms ease-in-out;
+  color: white;
+  display: flex;
+  top: -70px;
+  background-color: black;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.extra-menu div {
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.schedule {
+  background-color: #25437e;
+  padding: 5px 10px;
+}
+
+.report {
+  background-color: #816825;
+  padding: 5px 10px;
+}
+
+.close {
+  cursor: pointer;
+  padding: 0;
+  padding: 5px;
+}
+
+/* Effect js */
+.hidden {
+  top: 0;
+  opacity: 0;
+}
